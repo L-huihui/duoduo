@@ -38,7 +38,7 @@ class RegisterCreateSerializer(serializers.ModelSerializer):
 
     # 校验单个字段,校验手机号是否符合规范
     def validate_mobile(self, value):
-        if not re.match(r'1[3-9]\d{9}]', value):
+        if not re.match(r'1[3-9]\d{9}', value):
             raise serializers.ValidationError('手机号不符合规范')
         return value
 
@@ -64,9 +64,18 @@ class RegisterCreateSerializer(serializers.ModelSerializer):
         if redis_code is None:
             raise serializers.ValidationError('短信验证码已过期')
         # 校验完成后删除短信验证码
-        redis_conn.delete('sms_' + mobile)
+        # redis_conn.delete('sms_' + mobile)
         # # 验证短信验证码是否一致
         if redis_code.decode() != sms_code:
             raise serializers.ValidationError('验证码不一致')
+
         return attrs
 
+    def create(self, validated_data):
+        del validated_data['password2']
+        del validated_data['sms_code']
+        del validated_data['allow']
+        user = super().create(validated_data)
+        user.set_password(validated_data['password'])
+        user.save()
+        return user
