@@ -32,6 +32,16 @@ class RegisterImageCodeViews(APIView):
     3.把验证码保存到redis中
     4.返回图片相应
     '''
+    '''
+    前端传递过来一个UUID,后端接收到之后在后端生成图片验证码,
+    连接redis, 将UUID作为Key图片验证码中的验证信息作为value
+    存储在redis中,然后将图片验证码返回给前端
+    1, 接收前端生成的UUID
+    2, 生成图片验证码
+    3, 连接redis并且将图片验证码作为value,生成的uuid作为key
+    存储在reids中
+    4, 返回图片验证码给前段(注意:要修改content_type='image/jpeg')
+    '''
 
     def get(self, request, image_code_id):
         # 1.接收 image_code_id
@@ -57,8 +67,8 @@ class RegisterImageCodeViews(APIView):
 5.按照步骤实现功能
 
 
-当用户点击 获取短信按钮的时候 前端应该将 手机号,图片验证码以及验证码id发送给后端
-
+当用户点击 获取短信按钮的时候 前端应该将 手机号,
+图片验证码以及验证码id发送给后端
 1.接收参数
 2.校验参数
 3.生成短信
