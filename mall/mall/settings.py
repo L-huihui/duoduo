@@ -211,6 +211,20 @@ LOGGING = {
 REST_FRAMEWORK = {
     # 异常处理
     'EXCEPTION_HANDLER': 'utils.exceptions.exception_handler',
+    # 认证方式, 优先采用JＷＴ认证，　然后才采用ｓｅｓｓｉｏｎ认证
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ),
+
+}
+import datetime
+
+JWT_AUTH = {
+    'JWT_RESPONSE_PAYLOAD_HANDLER':
+    'utils.users.jwt_response_payload_handler',
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=1),
 }
 # 1, 我们想要替换系统的user 需要通过设置AUTH_USER_MODEL来设置
 # 2, 子应用, 模型类名 只能有一个
