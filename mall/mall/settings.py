@@ -33,7 +33,7 @@ CORS_ORIGIN_WHITELIST = (
     'www.meiduo.site:8080'
 )
 CORS_ALLOW_CREDENTIALS = True  # 允许携带cookie
-ALLOWED_HOSTS = ['127.0.0.1', 'api.meiduo.site']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'rest_framework',
     'corsheaders',
+    'oauth.apps.OauthConfig',
 ]
 
 MIDDLEWARE = [
@@ -222,11 +223,12 @@ REST_FRAMEWORK = {
 import datetime
 
 JWT_AUTH = {
-    'JWT_RESPONSE_PAYLOAD_HANDLER':
-    'utils.users.jwt_response_payload_handler',
+    'JWT_RESPONSE_PAYLOAD_HANDLER':'utils.users.jwt_response_payload_handler',
     'JWT_EXPIRATION_DELTA': datetime.timedelta(days=1),
 }
 # 1, 我们想要替换系统的user 需要通过设置AUTH_USER_MODEL来设置
 # 2, 子应用, 模型类名 只能有一个
 AUTH_USER_MODEL = 'users.User'
-
+AUTHENTICATION_BACKENDS = [
+   'utils.users.UsernameMobileAuthBackend',
+]

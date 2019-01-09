@@ -2,6 +2,8 @@ import re
 
 from rest_framework import serializers
 from django_redis import get_redis_connection
+from rest_framework_jwt.settings import api_settings
+
 from users.models import User
 
 '''
@@ -39,10 +41,10 @@ class RegisterCreateSerializer(serializers.ModelSerializer):
                                      allow_blank=False)
     allow = serializers.CharField(label='是否同意协议', required=True, allow_blank=False, write_only=True)
     password2 = serializers.CharField(label='确认密码', required=True, allow_blank=False, write_only=True)
-
+    token = serializers.CharField(label='token',read_only=True)
     class Meta:
         model = User
-        fields = ['mobile', 'username', 'password', 'sms_code', 'allow', 'password2']
+        fields = ['mobile', 'username', 'token','password', 'sms_code', 'allow', 'password2']
     # 在返回的数据中不能有密码,应该对密码字段几你选那设置为只读模式
     extra_kwargs = {
         'id': {'read_only': True},
@@ -118,4 +120,10 @@ class RegisterCreateSerializer(serializers.ModelSerializer):
         # 当前的密码是明文保存,为了安全起见,我们将密码进行加密
         user.set_password(validated_data['password'])
         user.save()
+        # 补充生成记录登录状态的token
+        jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
+        jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
+        payload = jwt_payload_handler(user)
+        token = jwt_encode_handler(payload)
+        user.token = token
         return user
