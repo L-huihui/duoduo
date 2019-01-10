@@ -20,4 +20,3 @@ class QQAuthURLView(APIView):
         oauth = OAuthQQ(client_id=settings.QQ_CLIENT_ID, client_secret=settings.QQ_CLIENT_SECRET, redirect_uri=settings.QQ_REDIRECT_URI, state=state)
         login_url = oauth.get_qq_url()
         return Response({'login_url':login_url})
-    pass

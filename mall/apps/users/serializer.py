@@ -111,7 +111,6 @@ class RegisterCreateSerializer(serializers.ModelSerializer):
         5, 保存数据
         6, 返回响应
         '''
-
     def create(self, validated_data):
         del validated_data['password2']
         del validated_data['sms_code']
@@ -127,3 +126,10 @@ class RegisterCreateSerializer(serializers.ModelSerializer):
         token = jwt_encode_handler(payload)
         user.token = token
         return user
+'''
+由于ＪＷＴ的机制，在用户完成第一次访问后服务器要返回一个token给客户端
+所以我们要在用户完成注册后生成一个token并连着前段所需信息一起返回给前端
+前端接收到token 后会在后面的每次请求时将token放在请求头中发送给服务器
+服务器根据某种算法对token进行解析，得到用户信息
+
+'''
