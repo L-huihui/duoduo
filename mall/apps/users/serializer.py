@@ -95,7 +95,7 @@ class RegisterCreateSerializer(serializers.ModelSerializer):
         if redis_code is None:
             raise serializers.ValidationError('短信验证码已过期')
         # 校验完成后删除短信验证码
-        # redis_conn.delete('sms_' + mobile)
+        redis_conn.delete('sms_' + mobile)
         # # 验证短信验证码是否一致
         if redis_code.decode() != sms_code:
             raise serializers.ValidationError('验证码不一致')

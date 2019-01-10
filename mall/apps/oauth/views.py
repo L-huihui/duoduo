@@ -8,35 +8,20 @@ from django.shortcuts import render
 from rest_framework import status
 
 from rest_framework.response import Response
-from rest_framework.settings import api_settings
+
 from rest_framework.views import APIView
 from QQLoginTool.QQtool import OAuthQQ
+from rest_framework_jwt.settings import api_settings
 
 from mall import settings
 from oauth.models import OAuthQQUser
+from oauth.serializer import OAuthQQUserSerializer
 from oauth.utils import generic_open_id
 
 '''
-class QQAuthURLView(APIView):
-
-
-    def get(self, request):
-        # next表示从那个页面进入到的登录页面，　将来登录成功后，就自动回到那个页面
-        state = request.query_params.get('state')
-        if not state:
-            state = '/'
-        # 获取ＱＱ登录页面网址
-        oauth = OAuthQQ(client_id=settings.QQ_CLIENT_ID, client_secret=settings.QQ_CLIENT_SECRET,
-                        redirect_uri=settings.QQ_REDIRECT_URI, state=state)
-        login_url = oauth.get_qq_url()
-        return Response({'login_url': login_url})
-
-'''
-'''
 当前段点击ＱＱ按钮的时候，会发送一个请求，
-我们后端要给它拼接一个ｕｒｌ（URL是根据文档拼接的）
+我们后端要给它拼接一个url（URL是根据文档拼接的）
 请求方式:/oauth/qq/status/
-
 '''
 
 
@@ -78,6 +63,7 @@ class OAuthQQURLView(APIView):
 如果token过期了会报异常
 '''
 
+
 class OAuthQQUserAPIView(APIView):
     def get(self, request):
         # １，接收这个code数据
@@ -102,20 +88,53 @@ class OAuthQQUserAPIView(APIView):
             # 数据库中没有查找到该数据, 绑定用户信息
             # 对openid进行加密处理
             token = generic_open_id(openid)
-            return Response({'access_token':token})
+            return Response({'access_token': token})
         else:
             # 数据库中有该数据，直接返回数据
             # 生成token
+
             jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
             jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
+
             payload = jwt_payload_handler(qquser.user)
             token = jwt_encode_handler(payload)
 
             return Response({
-                'token':token,
-                'username':qquser.user.username,
-                'user_id':qquser.user.id
+                'token': token,
+                'username': qquser.user.username,
+                'user_id': qquser.user.id
             })
+
+    '''
+    当用户点击绑定的时候，前段将用户手机号，　密码，　短信验证码和加密的openid传递到后端
+    １，　后端接收数据
+    ２，　对数据进行校验
+    ３，　保存数据
+    ４，　返回响应
+    请求方式：post   /oauth/qq/users/
+    '''
+
+    def post(self, request):
+        # １，　后端接收数据
+        data = request.data
+        # ２，　对数据进行校验
+        serializer = OAuthQQUserSerializer(data=data)
+        serializer.is_valid(raise_exception=True)
+        # ３，　保存数据
+        qquser = serializer.save()
+        # ４，　返回响应
+        jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
+        jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
+        payload = jwt_payload_handler(qquser.user)
+        token = jwt_encode_handler(payload)
+        return Response({
+            'token': token,
+            'username': qquser.user.username,
+            'user_id': qquser.user.id
+        })
+
+
+'''
 # 对返回给前段的openid进行加密处理
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from mall import settings
@@ -134,3 +153,4 @@ s.dumps(data)
 # b'eyJleHAiOjE1NDcxMTYzOTIsImFsZyI6IkhTMjU2IiwiaWF0IjoxNTQ3MTEyNzkyfQ.eyJvcGVuaWQiOiIxMjM0NTY3ODkwIn0.OSOsJaFAgzwn2EBd_7q2XPt7CsvdCnYYUdSxk0oOKsA'
 # 获取数据对数据进行解密
 s.loads(data)
+'''
