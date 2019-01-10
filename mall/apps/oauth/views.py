@@ -14,6 +14,7 @@ from QQLoginTool.QQtool import OAuthQQ
 
 from mall import settings
 from oauth.models import OAuthQQUser
+from oauth.utils import generic_open_id
 
 '''
 class QQAuthURLView(APIView):
@@ -64,10 +65,18 @@ class OAuthQQURLView(APIView):
     openid是此网站上唯一对应用户身份的标识，网站可将此ID进行
     存储便于用户下次登录时辨识其身份，或将其与用户在网站上
     的原有账号进行绑定。
-４，获取到的openid有两种情况，　一种是已经绑定过的一种是未绑定过的
-
+４，换取到的openid有两种情况，　一种是已经绑定过的一种是未绑定过的
+    我们对openid进行判断，查询数据库中是否有此openid值对应的用户信息
+    1, 如果有查询到该openid对应的用户信息，就说明该用户已经进行绑定了
+       我们直接返回到登录界面，注意也要返回相应的数据（token, username,user_id）
+    2, 如果没有查询到对应的用户信息，就返回到绑定页面，并且将openid也返回给前端
+    3, 因为openid非常重要，可以由openid拿到用户信息，所以我们在返回openid给前端
+    的时候要将openid进行加密处理，在后端拿到openid后进行解密处理，
 '''
-
+'''
+如果token被篡改了是会检测到的
+如果token过期了会报异常
+'''
 
 class OAuthQQUserAPIView(APIView):
     def get(self, request):
@@ -91,9 +100,9 @@ class OAuthQQUserAPIView(APIView):
             qquser = OAuthQQUser.objects.get(openid=openid)
         except OAuthQQUser.DoesNotExist:
             # 数据库中没有查找到该数据, 绑定用户信息
-            return Response({'access_token':openid})
-
-            pass
+            # 对openid进行加密处理
+            token = generic_open_id(openid)
+            return Response({'access_token':token})
         else:
             # 数据库中有该数据，直接返回数据
             # 生成token
@@ -107,5 +116,21 @@ class OAuthQQUserAPIView(APIView):
                 'username':qquser.user.username,
                 'user_id':qquser.user.id
             })
-            pass
-
+# 对返回给前段的openid进行加密处理
+from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
+from mall import settings
+# 创建一个序列化器
+# 其中两个参数分别是
+# secret_key  秘钥
+# expires_in　　过期时间
+s = Serializer(secret_key=settings.SECRET_KEY, expires_in=3600)
+# 组织数据
+data = {
+    'openid':'1234567890'
+}
+# 让序列化器对数据进行处理
+s.dumps(data)
+# 得到的结果是二进制的数据，跟token是一样的
+# b'eyJleHAiOjE1NDcxMTYzOTIsImFsZyI6IkhTMjU2IiwiaWF0IjoxNTQ3MTEyNzkyfQ.eyJvcGVuaWQiOiIxMjM0NTY3ODkwIn0.OSOsJaFAgzwn2EBd_7q2XPt7CsvdCnYYUdSxk0oOKsA'
+# 获取数据对数据进行解密
+s.loads(data)
