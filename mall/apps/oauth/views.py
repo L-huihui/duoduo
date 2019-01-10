@@ -8,10 +8,12 @@ from django.shortcuts import render
 from rest_framework import status
 
 from rest_framework.response import Response
+from rest_framework.settings import api_settings
 from rest_framework.views import APIView
 from QQLoginTool.QQtool import OAuthQQ
 
 from mall import settings
+from oauth.models import OAuthQQUser
 
 '''
 class QQAuthURLView(APIView):
@@ -54,11 +56,16 @@ class OAuthQQURLView(APIView):
 3, 有了token 然后再换取openid
 '''
 '''
-前端接收到用户同意之后的code ,前段讲code发送给后端
-１，接收这个code数据
-2, 用code换ｔｏｋｅｎ
-３，用token换openid
-请求方式：　／oauth/qq/users/
+在用户通过扫码同意授权之后认证服务器会返回一个code给前端
+前端会将code以GET的形式发送给后端，后端接收到code
+１，　后端接收code
+２，　后端讲code发送给认证服务器换取token
+３，　将tokrn发送给认证服务器换取openid
+    openid是此网站上唯一对应用户身份的标识，网站可将此ID进行
+    存储便于用户下次登录时辨识其身份，或将其与用户在网站上
+    的原有账号进行绑定。
+４，获取到的openid有两种情况，　一种是已经绑定过的一种是未绑定过的
+
 '''
 
 
@@ -77,4 +84,28 @@ class OAuthQQUserAPIView(APIView):
         token = oauth.get_access_token(code)
         # ３，用token换openid
         openid = oauth.get_open_id(token)
-        pass
+        # ４，查询数据库中openid的数据，
+        # 如果有就说明用户已经绑定了  就让用户直接登录
+        # 如果没有数据就说明用户没有绑定　　就绑定用户信息
+        try:
+            qquser = OAuthQQUser.objects.get(openid=openid)
+        except OAuthQQUser.DoesNotExist:
+            # 数据库中没有查找到该数据, 绑定用户信息
+            return Response({'access_token':openid})
+
+            pass
+        else:
+            # 数据库中有该数据，直接返回数据
+            # 生成token
+            jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
+            jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
+            payload = jwt_payload_handler(qquser.user)
+            token = jwt_encode_handler(payload)
+
+            return Response({
+                'token':token,
+                'username':qquser.user.username,
+                'user_id':qquser.user.id
+            })
+            pass
+
