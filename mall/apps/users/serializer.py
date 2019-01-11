@@ -1,4 +1,5 @@
 import re
+from celery_tasks.mail.tasks import send_verify_mail
 
 from rest_framework import serializers
 from django_redis import get_redis_connection
@@ -41,10 +42,12 @@ class RegisterCreateSerializer(serializers.ModelSerializer):
                                      allow_blank=False)
     allow = serializers.CharField(label='是否同意协议', required=True, allow_blank=False, write_only=True)
     password2 = serializers.CharField(label='确认密码', required=True, allow_blank=False, write_only=True)
-    token = serializers.CharField(label='token',read_only=True)
+    token = serializers.CharField(label='token', read_only=True)
+
     class Meta:
         model = User
-        fields = ['mobile', 'username', 'token','password', 'sms_code', 'allow', 'password2']
+        fields = ['mobile', 'username', 'token', 'password', 'sms_code', 'allow', 'password2']
+
     # 在返回的数据中不能有密码,应该对密码字段几你选那设置为只读模式
     extra_kwargs = {
         'id': {'read_only': True},
@@ -111,6 +114,7 @@ class RegisterCreateSerializer(serializers.ModelSerializer):
         5, 保存数据
         6, 返回响应
         '''
+
     def create(self, validated_data):
         del validated_data['password2']
         del validated_data['sms_code']
@@ -126,6 +130,8 @@ class RegisterCreateSerializer(serializers.ModelSerializer):
         token = jwt_encode_handler(payload)
         user.token = token
         return user
+
+
 '''
 由于ＪＷＴ的机制，在用户完成第一次访问后服务器要返回一个token给客户端
 所以我们要在用户完成注册后生成一个token并连着前段所需信息一起返回给前端
@@ -133,3 +139,41 @@ class RegisterCreateSerializer(serializers.ModelSerializer):
 服务器根据某种算法对token进行解析，得到用户信息
 
 '''
+
+
+# 用户个人中心
+class UserDetailSerializer(serializers.ModelSerializer):
+    '''
+    用户详细信息序列化器
+    '''
+
+    class Meta:
+        model = User
+        fields = ('id', 'username', 'mobile', 'email', 'email_active')
+
+
+# 邮箱
+
+class EmailSerializer(serializers.ModelSerializer):
+    '''
+    邮箱序列化
+    '''
+    class Meta:
+        model = User
+        fields = ('id', 'email')
+        extra_kwargs = {
+            'email': {
+                'required': True
+            }
+        }
+
+    def update(self, instance, validated_data):
+        email = validated_data['email']
+        instance.email = validated_data['email']
+        instance.save()
+        # 发送激活邮件
+        # 生成激活链接
+        verify_url = instance.generate_verify_email_url()
+        # 发送,注意调用delay方法
+        send_verify_mail.delay(email, verify_url)
+        return instance

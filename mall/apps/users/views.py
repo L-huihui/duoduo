@@ -2,12 +2,16 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.views.generic import CreateView
+from rest_framework import status
+from rest_framework.generics import RetrieveAPIView, UpdateAPIView
+from rest_framework.permissions import IsAuthenticated
 
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
 # 请求方式GET    /users/usernames/(?P<username>\w{5, 20})/count/
 from users.models import User
+
 '''
 前端在填写完用户名的时候,会将用户名传递给后端,通过get方式存放在url中
 后端操作:
@@ -18,7 +22,7 @@ from users.models import User
 '''
 
 # 验证用户名
-from users.serializer import RegisterCreateSerializer
+from users.serializer import RegisterCreateSerializer, UserDetailSerializer, EmailSerializer
 
 
 class RegisterUsernameCountAPIView(APIView):
@@ -67,8 +71,9 @@ class RegisterPhoneCountAPIView(APIView):
 3, 数据校验正确后将数据保存到数据库
 4, 返回响应
 '''
-class RegisterCreateView(APIView):
 
+
+class RegisterCreateView(APIView):
     def post(self, request):
         # 1. 接收数据
         data = request.data
@@ -79,3 +84,55 @@ class RegisterCreateView(APIView):
         serializer.save()
         # 4. 返回相应
         return Response(serializer.data)
+
+
+class UserDetailView(RetrieveAPIView):
+    '''获取登录用户的信息'''
+    # 添加认证信息
+    permission_classes = [IsAuthenticated]
+    serializer_class = UserDetailSerializer
+
+    # 重写get_object方法：
+    def get_object(self):
+        return self.request.user
+
+
+# 邮箱
+class EmailView(UpdateAPIView):
+    permission_classes = [IsAuthenticated]
+    serializer_class = EmailSerializer
+
+    def get_object(self):
+        return self.request.user
+
+
+
+class VerificationEmailView(APIView):
+    """
+    验证激活邮箱
+    GET /users/emails/verification/?token=xxxx
+
+    思路:
+    获取token,并判断
+    获取 token中的id
+    查询用户,并判断是否存在
+    修改状态
+    返回响应
+    """
+
+    def get(self,request):
+        # 获取token, 并判断
+        token = request.query_params.get('token')
+        if not token:
+            return Response({'message':'缺少token'},status=status.HTTP_400_BAD_REQUEST)
+        # 获取token中的id,email
+        # 查询用户, 并判断是否存在
+        user = User.check_verify_email_token(token)
+        if user is None:
+            return Response({'message':'链接无效'},status=status.HTTP_400_BAD_REQUEST)
+        else:
+            # 修改状态
+            user.email_active = True
+            user.save()
+            # 返回响应
+            return Response({'message':'ok'})
