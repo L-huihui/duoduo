@@ -155,9 +155,6 @@ class UserDetailSerializer(serializers.ModelSerializer):
 # 邮箱
 
 class EmailSerializer(serializers.ModelSerializer):
-    '''
-    邮箱序列化
-    '''
     class Meta:
         model = User
         fields = ('id', 'email')
@@ -166,7 +163,6 @@ class EmailSerializer(serializers.ModelSerializer):
                 'required': True
             }
         }
-
     def update(self, instance, validated_data):
         email = validated_data['email']
         instance.email = validated_data['email']

@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'oauth.apps.OauthConfig',
+    'areas.apps.AreasConfig',
 
 ]
 
@@ -248,3 +249,11 @@ EMAIL_HOST_USER = 'qi_rui_hua@163.com'
 EMAIL_HOST_PASSWORD = '123456abc'
 #收件人看到的发件人
 EMAIL_FROM = '美多商城<qi_rui_hua@163.com>'
+
+# 添加缓存设置
+REST_FRAMEWORK_EXTENSIONS = {
+    # 缓存时间
+    'DEFAULT_CACHE_RESPONSE_TIMEOUT': 60 * 60,
+    # 缓存存储
+    'DEFAULT_USE_CACHE': 'default',
+}
