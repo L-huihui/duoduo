@@ -12,8 +12,8 @@ from .serializer import AreaSerializer, SubAreaSerializer
 # Create your views here.
 
 
-# class AreasViewSet(CacheResponseMixin, ReadOnlyModelViewSet):
-class AreasViewSet( ReadOnlyModelViewSet):
+class AreasViewSet(CacheResponseMixin, ReadOnlyModelViewSet):
+# class AreasViewSet( ReadOnlyModelViewSet):
     """
     行政区划信息
     list : GET/areas/

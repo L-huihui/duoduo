@@ -2,15 +2,19 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.views.generic import CreateView
+from rest_framework import mixins
 from rest_framework import status
-from rest_framework.generics import RetrieveAPIView, UpdateAPIView
+from rest_framework.decorators import action
+from rest_framework.generics import RetrieveAPIView, UpdateAPIView, CreateAPIView, ListAPIView
 from rest_framework.permissions import IsAuthenticated
 
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
 # 请求方式GET    /users/usernames/(?P<username>\w{5, 20})/count/
-from users.models import User
+from rest_framework.viewsets import GenericViewSet
+
+from users.models import User, Address
 
 '''
 前端在填写完用户名的时候,会将用户名传递给后端,通过get方式存放在url中
@@ -22,7 +26,8 @@ from users.models import User
 '''
 
 # 验证用户名
-from users.serializer import RegisterCreateSerializer, UserDetailSerializer, EmailSerializer
+from users.serializer import RegisterCreateSerializer, UserDetailSerializer, EmailSerializer, AddressSerializer, \
+    AddressTitleSerializer
 
 
 class RegisterUsernameCountAPIView(APIView):
@@ -106,7 +111,6 @@ class EmailView(UpdateAPIView):
         return self.request.user
 
 
-
 class VerificationEmailView(APIView):
     """
     验证激活邮箱
@@ -120,19 +124,105 @@ class VerificationEmailView(APIView):
     返回响应
     """
 
-    def get(self,request):
+    def get(self, request):
         # 获取token, 并判断
         token = request.query_params.get('token')
         if not token:
-            return Response({'message':'缺少token'},status=status.HTTP_400_BAD_REQUEST)
+            return Response({'message': '缺少token'}, status=status.HTTP_400_BAD_REQUEST)
         # 获取token中的id,email
         # 查询用户, 并判断是否存在
         user = User.check_verify_email_token(token)
         if user is None:
-            return Response({'message':'链接无效'},status=status.HTTP_400_BAD_REQUEST)
+            return Response({'message': '链接无效'}, status=status.HTTP_400_BAD_REQUEST)
         else:
             # 修改状态
             user.email_active = True
             user.save()
             # 返回响应
-            return Response({'message':'ok'})
+            return Response({'message': 'ok'})
+
+
+# 新建收货地址视图
+# class UserAddressViewSet(CreateAPIView):
+# # class UserAddressViewSet(ListAPIView):
+#     # 设置序列化器
+#     serializer_class = AddressSerializer
+#     # 我们不用queryset因为我们不需要在新建用户地址的之后不用获取每条数据
+#
+#
+#     # queryset = Address.objects.all()
+
+class AddressViewSet(mixins.ListModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin, GenericViewSet):
+    """
+    用户地址新增与修改
+    list GET: /users/addresses/
+    create POST: /users/addresses/
+    destroy DELETE: /users/addresses/
+    action PUT: /users/addresses/pk/status/
+    action PUT: /users/addresses/pk/title/
+    """
+
+    # 制定序列化器
+    serializer_class = AddressSerializer
+    # 添加用户权限
+    permission_classes = [IsAuthenticated]
+
+    # 由于用户的地址有存在删除的状态,所以我们需要对数据进行筛选
+    def get_queryset(self):
+        return self.request.user.addresses.filter(is_deleted=False)
+
+    def create(self, request, *args, **kwargs):
+        """
+        保存用户地址数据
+        """
+        count = request.user.addresses.count()
+        if count >= 20:
+            return Response({'message': '保存地址数量已经达到上限'}, status=status.HTTP_400_BAD_REQUEST)
+
+        return super().create(request, *args, **kwargs)
+
+    def list(self, request, *args, **kwargs):
+        '''获取用户地址列表'''
+        queryset = self.get_queryset()
+        serializer = self.get_serializer(queryset, many=True)
+        user = self.request.user
+        # 设置响应
+        return Response({
+            'user_id':user.id,
+            'default_address_id':user.default_address_id,
+            'limit': 20,
+            'addresses':serializer.data
+        })
+
+    def destroy(self, request, *args, **kwargs):
+        '''
+        删除地址
+        :param request:
+        :param args:
+        :param kwargs:
+        :return:
+        '''
+        address = self.get_object()
+        # 进行逻辑删除
+        address.is_deleted = True
+        address.save()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+    @action(methods=['put'], detail=True)
+    def title(self, requset, pk=None, address_id=None):
+        '''修改标题'''
+        address = self.get_object()
+        serializer = AddressTitleSerializer(instance=address, data=requset.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data)
+
+    @action(methods=['put'], detail=True)
+    def status(self, request, pk=None, address_id=None):
+        """
+        设置默认地址
+        """
+        address = self.get_object()
+        request.user.default_address = address
+        request.user.save()
+        return Response({'message': 'OK'}, status=status.HTTP_200_OK)

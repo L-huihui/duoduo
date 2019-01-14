@@ -5,7 +5,7 @@ from rest_framework import serializers
 from django_redis import get_redis_connection
 from rest_framework_jwt.settings import api_settings
 
-from users.models import User
+from users.models import User, Address
 
 '''
 1,创建序列化器,继承自ModelSerializer,model设置为User
@@ -163,6 +163,7 @@ class EmailSerializer(serializers.ModelSerializer):
                 'required': True
             }
         }
+
     def update(self, instance, validated_data):
         email = validated_data['email']
         instance.email = validated_data['email']
@@ -173,3 +174,34 @@ class EmailSerializer(serializers.ModelSerializer):
         # 发送,注意调用delay方法
         send_verify_mail.delay(email, verify_url)
         return instance
+
+
+# 地址序列化器
+class AddressSerializer(serializers.ModelSerializer):
+    province = serializers.StringRelatedField(read_only=True)
+    city = serializers.StringRelatedField(read_only=True)
+    district = serializers.StringRelatedField(read_only=True)
+    province_id = serializers.IntegerField(label='省ID', required=True)
+    city_id = serializers.IntegerField(label='市ID', required=True)
+    district_id = serializers.IntegerField(label='区ID', required=True)
+    mobile = serializers.RegexField(label='手机号', regex=r'^1[3-9]\d{9}$')
+
+    class Meta:
+        model = Address
+        exclude = ('user', 'is_deleted', 'create_time', 'updata_time')
+
+    def create(self, validated_data):
+        # Address模型类中有user属性,将user对象添加到模型类的创建参数中
+        # 序列化器中获取用户数据
+        # 当前用户信息在request中，request保存在context中
+        validated_data['user'] = self.context['request'].user
+        return super().create(validated_data)
+
+
+class AddressTitleSerializer(serializers.ModelSerializer):
+    """
+    地址标题
+    """
+    class Meta:
+        model = Address
+        fields = ('title',)

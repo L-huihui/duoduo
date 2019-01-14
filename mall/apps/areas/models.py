@@ -18,7 +18,6 @@ class Area(models.Model):
     １，在省份数据库中只有id和name字段，没有parent字段
     ２，在市数据库中的parent字段的值为所属省份的id
     ３，区县数据库中的parent字段的值为所属市的id
-
     '''
     class Meta:
         db_table = 'tb_areas'

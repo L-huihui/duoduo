@@ -9,5 +9,11 @@ urlpatterns = [
    url(r'^auths/', obtain_jwt_token, name='auths'),
    url(r'^infos/$', views.UserDetailView.as_view(), name='infos'),
    url(r'^emails/$', views.EmailView.as_view(), name='send_mail'),
-   url(r'^emails/verification/$', views.VerificationEmailView.as_view())
+   url(r'^emails/verification/$', views.VerificationEmailView.as_view()),
 ]
+
+from .views import AddressViewSet
+from rest_framework.routers import DefaultRouter
+router = DefaultRouter()
+router.register(r'addresses',AddressViewSet,base_name='address')
+urlpatterns += router.urls
