@@ -23,5 +23,6 @@ urlpatterns = [
     url(r'^verifications/', include('verifications.urls', namespace='verifications')),
     url(r'^oauth/', include('oauth.urls')),
     url(r'^areas/', include('areas.urls', namespace='areas')),
-
+    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
+    url(r'^goods/', include('goods.urls', namespace='goods')),
 ]

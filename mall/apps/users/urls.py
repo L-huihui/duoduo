@@ -11,7 +11,6 @@ urlpatterns = [
    url(r'^emails/$', views.EmailView.as_view(), name='send_mail'),
    url(r'^emails/verification/$', views.VerificationEmailView.as_view()),
 ]
-
 from .views import AddressViewSet
 from rest_framework.routers import DefaultRouter
 router = DefaultRouter()
