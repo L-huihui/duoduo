@@ -24,3 +24,5 @@ def generate_static_list_search_html():
     file_path = os.path.join(settings.GENERATED_STATIC_HTML_FILES_DIR, 'list.html')
     with open(file_path, 'w') as f:
         f.write(html_text)
+
+
