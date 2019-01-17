@@ -2,231 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3e7baa8-10a3-4ce3-b0c6-a706ecaa6124" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/QQ-weixin.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/adv01.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/adv02.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/banner01.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/banner02.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/banner03.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/bar_code.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/cat.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/clock.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/clock.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/down.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/edit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/find-password.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/goods/goods001.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/goods/goods002.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/goods/goods003.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/goods/goods004.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/goods/goods005.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/goods/goods006.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/goods/goods007.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/goods/goods008.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/goods/goods009.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/goods_450.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/icons.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/icons02.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/interval_line.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/left_bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/login_banner.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/logo02.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/pay_icons.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/pic_code.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/register_banner.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/selected.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/shine.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/shop_cart.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/slide01.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/slide02.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/slide03.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/slide04.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/stars.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/success.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/images/time_count_bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/libs/captcha/fonts/Arial.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/libs/captcha/fonts/Georgia.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/libs/captcha/fonts/actionj.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/js/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/.idea/meiduo_34.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/.idea/watcherTasks.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/.idea/美多商城前端资源.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/cart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/css/reset.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/detail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/find_password.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/goods/1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/goods/10.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/goods/11.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/goods/12.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/goods/13.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/goods/14.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/goods/15.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/goods/16.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/goods/2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/goods/3.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/goods/4.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/goods/5.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/goods/6.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/goods/7.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/goods/8.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/goods/9.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/goods_judge.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/js/axios-0.18.0.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/js/detail.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/js/goods_judge.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/js/host.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/js/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/js/jquery-1.12.4.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/js/list.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/js/login.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/js/oauth_callback.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/js/register.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/js/search.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/js/slide.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/js/user_center_info.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/js/user_center_site.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/js/vue-2.5.16.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/oauth_callback.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/order_success.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/place_order.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/register.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/search.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/success_verify_email.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/user_center_info.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/user_center_order.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/user_center_pass.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/front/user_center_site.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/.idea/mall.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/areas/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/areas/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/areas/migrations/0001_initial.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/areas/migrations/0002_auto_20190114_0953.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/areas/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/areas/serailizers.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/areas/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/areas/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/areas/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/carts/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/carts/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/carts/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/carts/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/carts/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/contents/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/contents/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/contents/crons.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/contents/migrations/0001_initial.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/contents/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/contents/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/contents/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/goods/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/goods/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/goods/migrations/0001_initial.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/goods/migrations/0002_auto_20190115_1031.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/goods/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/goods/search_indexes.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/goods/serializers.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/goods/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/goods/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/goods/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/oauth/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/oauth/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/oauth/migrations/0001_initial.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/oauth/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/oauth/serializers.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/oauth/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/oauth/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/oauth/utils.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/oauth/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/orders/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/orders/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/orders/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/orders/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/orders/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/pay/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/pay/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/pay/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/pay/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/pay/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/users/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/users/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/users/migrations/0001_initial.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/users/migrations/0002_user_email_active.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/users/migrations/0003_auto_20190114_0953.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/users/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/users/serialziers.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/users/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/users/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/users/utils.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/users/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/verifications/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/verifications/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/verifications/constants.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/verifications/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/verifications/serializers.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/verifications/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/verifications/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/verifications/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/clery_tasks/config.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/clery_tasks/html/tasks.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/clery_tasks/mail/tasks.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/clery_tasks/main.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/clery_tasks/sms/tasks.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/libs/captcha/captcha.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/libs/yuntongxun/CCPRestSDK.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/libs/yuntongxun/sms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/libs/yuntongxun/xmltojson.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/mall/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/mall/settings.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/mall/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/mall/wsgi.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/manage.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/script/generic_detail_html.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/script/goods_data.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/script/import_goods_data.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/templates/detail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/templates/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/templates/list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/templates/search/indexes/goods/sku_text.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/utils/exceptions.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/utils/fastdfs/client.conf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/utils/fastdfs/storage.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/utils/goods.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/utils/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/utils/pagination.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/utils/users.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/logs/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/meiduo_mall.iml" afterPath="$PROJECT_DIR$/.idea/meiduo_mall.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/js/list.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/apps/goods/serializer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/celery_tasks/html/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/celery_tasks/html/tasks.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/utils/goods.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mall/utils/pagination.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/front/list.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mall/apps/contents/crons.py" afterPath="$PROJECT_DIR$/mall/apps/contents/crons.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mall/apps/goods/models.py" afterPath="$PROJECT_DIR$/mall/apps/goods/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front/index.html" afterPath="$PROJECT_DIR$/front/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mall/apps/goods/admin.py" afterPath="$PROJECT_DIR$/mall/apps/goods/admin.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mall/apps/goods/urls.py" afterPath="$PROJECT_DIR$/mall/apps/goods/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mall/apps/users/models.py" afterPath="$PROJECT_DIR$/mall/apps/users/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mall/apps/goods/views.py" afterPath="$PROJECT_DIR$/mall/apps/goods/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mall/celery_tasks/main.py" afterPath="$PROJECT_DIR$/mall/celery_tasks/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mall/mall/settings.py" afterPath="$PROJECT_DIR$/mall/mall/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mall/utils/fastdfs/storage.py" afterPath="$PROJECT_DIR$/mall/utils/fastdfs/storage.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mall/utils/models.py" afterPath="$PROJECT_DIR$/mall/utils/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mall/utils/users.py" afterPath="$PROJECT_DIR$/mall/utils/users.py" />
     </list>
     <list id="c1065b4e-13fd-4fcd-b87b-2a1607ef2efe" name="Failed commit: Default" comment="FastDFS与富文本编辑器&#10;&#10;&#10;&#10;首页图片的添加以及首页静态页面的生成" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -237,8 +26,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/meiduo_mall$serializer.coverage" NAME="serializer Coverage Results" MODIFIED="1547713889062" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mall/apps/goods" />
     <SUITE FILE_PATH="coverage/meiduo_mall$views.coverage" NAME="views Coverage Results" MODIFIED="1547120528752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mall/apps/oauth" />
-    <SUITE FILE_PATH="coverage/meiduo_mall$manage.coverage" NAME="manage Coverage Results" MODIFIED="1547712020903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mall" />
+    <SUITE FILE_PATH="coverage/meiduo_mall$manage.coverage" NAME="manage Coverage Results" MODIFIED="1547724746359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mall" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -253,112 +43,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="users.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mall/utils/users.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="apps.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/pay/apps.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mall/apps/goods/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="36" column="8" lean-forward="false" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mall/apps/oauth/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-182">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mall/apps/orders/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mall/apps/users/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="72" column="28" lean-forward="false" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mall/apps/contents/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-117">
-              <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mall/utils/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="storage.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mall/utils/fastdfs/storage.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="client.conf" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mall/utils/fastdfs/client.conf">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -379,6 +64,7 @@
       <find>right_content clearfix</find>
       <find>generate_stati</find>
       <find>tb_content</find>
+      <find>生活服务</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -387,8 +73,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mall/mall/__init__.py" />
-        <option value="$PROJECT_DIR$/mall/utils/exceptions.py" />
         <option value="$PROJECT_DIR$/front/js/1.js" />
         <option value="$PROJECT_DIR$/mall/apps/verifications/serializer.py" />
         <option value="$PROJECT_DIR$/mall/celery_tasks/config.py" />
@@ -407,7 +91,6 @@
         <option value="$PROJECT_DIR$/mall/apps/oauth/serializer.py" />
         <option value="$PROJECT_DIR$/mall/celery_tasks/sms/tasks.py" />
         <option value="$PROJECT_DIR$/mall/celery_tasks/mail/tasks.py" />
-        <option value="$PROJECT_DIR$/mall/celery_tasks/main.py" />
         <option value="$PROJECT_DIR$/mall/apps/areas/serializer.py" />
         <option value="$PROJECT_DIR$/mall/apps/areas/urls.py" />
         <option value="$PROJECT_DIR$/mall/apps/areas/models.py" />
@@ -420,21 +103,27 @@
         <option value="$PROJECT_DIR$/mall/utils/fastdfs/client.con" />
         <option value="$PROJECT_DIR$/mall/utils/fastdfs/client.conf" />
         <option value="$PROJECT_DIR$/mall/apps/contents/admin.py" />
-        <option value="$PROJECT_DIR$/mall/apps/goods/admin.py" />
         <option value="$PROJECT_DIR$/mall/script/import_goods_data" />
         <option value="$PROJECT_DIR$/mall/script/import_goods_data.sh" />
         <option value="$PROJECT_DIR$/mall/mall/urls.py" />
         <option value="$PROJECT_DIR$/mall/logs.py" />
-        <option value="$PROJECT_DIR$/mall/apps/goods/views.py" />
-        <option value="$PROJECT_DIR$/mall/apps/goods/urls.py" />
         <option value="$PROJECT_DIR$/mall/apps/contents/crons.py" />
-        <option value="$PROJECT_DIR$/mall/mall/settings.py" />
         <option value="$PROJECT_DIR$/mall/utils/fastdfs/storage.py" />
-        <option value="$PROJECT_DIR$/mall/logs/crontab.log" />
         <option value="$PROJECT_DIR$/mall/utils/users.py" />
         <option value="$PROJECT_DIR$/mall/apps/goods/models.py" />
         <option value="$PROJECT_DIR$/mall/utils/models.py" />
         <option value="$PROJECT_DIR$/mall/apps/users/models.py" />
+        <option value="$PROJECT_DIR$/mall/apps/goods/serializer.py" />
+        <option value="$PROJECT_DIR$/mall/apps/goods/urls.py" />
+        <option value="$PROJECT_DIR$/mall/utils/pagination.py" />
+        <option value="$PROJECT_DIR$/mall/mall/settings.py" />
+        <option value="$PROJECT_DIR$/mall/apps/goods/views.py" />
+        <option value="$PROJECT_DIR$/mall/celery_tasks/html/tasks.py" />
+        <option value="$PROJECT_DIR$/mall/celery_tasks/main.py" />
+        <option value="$PROJECT_DIR$/mall/apps/goods/admin.py" />
+        <option value="$PROJECT_DIR$/mall/utils/goods.py" />
+        <option value="$PROJECT_DIR$/mall/logs/crontab.log" />
+        <option value="$PROJECT_DIR$/front/list.html" />
       </list>
     </option>
   </component>
@@ -453,7 +142,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="53" />
     <option name="y" value="24" />
-    <option name="width" value="1046" />
+    <option name="width" value="1084" />
     <option name="height" value="651" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -518,10 +207,122 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meiduo_mall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meiduo_mall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meiduo_mall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meiduo_mall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="celery_tasks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meiduo_mall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meiduo_mall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="celery_tasks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meiduo_mall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meiduo_mall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meiduo_mall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meiduo_mall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="goods" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meiduo_mall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meiduo_mall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -538,11 +339,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mall/templates" />
+      <recent name="$PROJECT_DIR$/front" />
+      <recent name="$PROJECT_DIR$/front/js" />
       <recent name="$PROJECT_DIR$/mall/apps/goods" />
       <recent name="$PROJECT_DIR$/mall/apps/contents/migrations" />
-      <recent name="$PROJECT_DIR$/front" />
-      <recent name="$PROJECT_DIR$/mall/logs" />
-      <recent name="$PROJECT_DIR$/front/js" />
     </key>
   </component>
   <component name="RunManager" selected="Python.manage">
@@ -578,6 +379,24 @@
       <module name="meiduo_mall" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mall/apps/oauth/views.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="serializer" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mall/apps/goods" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="meiduo_mall" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mall/apps/goods/serializer.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -799,15 +618,17 @@
     <configuration default="false" name="register.html" type="JavascriptDebugType" factoryName="JavaScript Debug" nameIsGenerated="true" uri="http://localhost:63342/meiduo_mall/front/register.html">
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.register.html" />
       <item index="1" class="java.lang.String" itemvalue="Python.manage" />
       <item index="2" class="java.lang.String" itemvalue="Python.views" />
+      <item index="3" class="java.lang.String" itemvalue="Python.serializer" />
     </list>
     <recent_temporary>
-      <list size="2">
+      <list size="3">
         <item index="0" class="java.lang.String" itemvalue="Python.manage" />
-        <item index="1" class="java.lang.String" itemvalue="Python.views" />
+        <item index="1" class="java.lang.String" itemvalue="Python.serializer" />
+        <item index="2" class="java.lang.String" itemvalue="Python.views" />
       </list>
     </recent_temporary>
   </component>
@@ -941,48 +762,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="53" y="24" width="1046" height="651" extended-state="6" />
-    <editor active="true" />
+    <frame x="53" y="24" width="1084" height="651" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31075698" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2802303" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.68345326" sideWeight="0.50982" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32733813" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289256" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3369906" sideWeight="0.49018005" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4012539" sideWeight="0.49018005" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3432602" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25719425" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3966942" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39568347" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.68403363" sideWeight="0.50982" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289256" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3181818" sideWeight="0.49018005" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55956113" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20801033" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3966942" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -1042,6 +843,9 @@
           <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
       <option name="time" value="42" />
     </breakpoint-manager>
     <watches-manager>
@@ -1051,32 +855,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mall/celery_tasks/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="12" column="62" lean-forward="false" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall/celery_tasks/sms/tasks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall/apps/areas/serializer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/django_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py" />
-    <entry file="file://$USER_HOME$/.virtualenvs/django_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py" />
-    <entry file="file://$USER_HOME$/.virtualenvs/django_py3_1.11/lib/python3.5/site-packages/rest_framework_extensions/key_constructor/bits.py" />
-    <entry file="file://$USER_HOME$/.virtualenvs/django_py3_1.11/lib/python3.5/site-packages/rest_framework_extensions/cache/mixins.py" />
-    <entry file="file://$USER_HOME$/.virtualenvs/django_py3_1.11/lib/python3.5/importlib/__init__.py" />
     <entry file="file://$USER_HOME$/.virtualenvs/django_py3_1.11/lib/python3.5/site-packages/django/conf/urls/__init__.py" />
     <entry file="file://$PROJECT_DIR$/mall/apps/areas/urls.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1144,20 +922,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mall/script/import_goods_data.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="49" lean-forward="false" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall/templates/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mall/logs.py" />
     <entry file="file://$PROJECT_DIR$/mall/logs/meiduo.log">
       <provider selected="true" editor-type-id="text-editor">
@@ -1181,31 +945,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mall/mall/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-          <folding>
-            <element signature="e#638#679#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall/apps/goods/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mall/apps/contents/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1221,7 +964,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1229,7 +971,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
           <caret line="85" column="8" lean-forward="false" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1237,33 +978,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall/apps/goods/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall/apps/goods/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall/logs/crontab.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="193" column="46" lean-forward="false" selection-start-line="193" selection-start-column="25" selection-end-line="193" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1271,17 +985,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-830">
           <caret line="34" column="23" lean-forward="false" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall/mall/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="281" column="14" lean-forward="false" selection-start-line="281" selection-start-column="14" selection-end-line="281" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1289,7 +992,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1297,17 +999,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/pay/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1315,7 +1006,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1323,7 +1013,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1331,25 +1020,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mall/apps/contents/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-117">
+        <state relative-caret-position="-1">
           <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mall/apps/oauth/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-182">
+        <state relative-caret-position="-45">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1357,7 +1041,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1365,7 +1048,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
           <caret line="72" column="28" lean-forward="false" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1373,7 +1055,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1381,6 +1062,144 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="36" column="8" lean-forward="false" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall/apps/contents/migrations/meiduo_34/mall/apps/pay/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall/apps/goods/serializer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall/script/import_goods_data.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="27" lean-forward="true" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall/mall/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall/mall/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4972">
+          <caret line="226" column="0" lean-forward="false" selection-start-line="226" selection-start-column="0" selection-end-line="226" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/js/list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall/apps/goods/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall/utils/pagination.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall/logs/crontab.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="538" column="16" lean-forward="false" selection-start-line="538" selection-start-column="16" selection-end-line="539" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/js/list.html" />
+    <entry file="file://$PROJECT_DIR$/mall/apps/goods/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="26" column="21" lean-forward="false" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall/celery_tasks/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="49" lean-forward="false" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall/apps/goods/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="102" column="38" lean-forward="false" selection-start-line="102" selection-start-column="38" selection-end-line="102" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall/celery_tasks/html/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall/utils/goods.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall/templates/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-896">
+          <caret line="37" column="10" lean-forward="true" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="1632" column="34" lean-forward="true" selection-start-line="1632" selection-start-column="34" selection-end-line="1632" selection-end-column="34" />
           <folding />
         </state>
       </provider>

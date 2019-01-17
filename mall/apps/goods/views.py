@@ -2,6 +2,9 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.views.generic import View
+from rest_framework.filters import OrderingFilter
+from rest_framework_extensions.cache.mixins import ListCacheResponseMixin
+
 from goods.models import GoodsCategory, GoodsChannel
 from contents.models import ContentCategory
 from collections import OrderedDict
@@ -26,15 +29,15 @@ class CategoryView(View):
             # 获取group_id是否在存储容器，如果不在就初始化
             if group_id not in categories:
                 categories[group_id] = {
-                    'channels':[],
-                    'sub_cats':[]
+                    'channels': [],
+                    'sub_cats': []
                 }
             one = channel.category
             # 为channels填充数据
             categories[group_id]['channels'].append({
-                'id':one.id,
-                'name':one.name,
-                'url':channel.url
+                'id': one.id,
+                'name': one.name,
+                'url': channel.url
             })
             # 为sub_cats填充数据
             for two in one.goodscategory_set.all():
@@ -47,7 +50,7 @@ class CategoryView(View):
                 # 组织数据
                 categories[group_id]['sub_cats'].append(two)
 
-#广告和首页数据
+            # 广告和首页数据
         contents = {}
         content_categories = ContentCategory.objects.all()
         # content_categories = [{'name':xx , 'key': 'index_new'}, {}, {}]
@@ -65,3 +68,36 @@ class CategoryView(View):
         }
         return render(request, 'index.html', context)
 
+
+from rest_framework.generics import ListAPIView
+from goods.models import SKU
+from .serializer import SKUSerializer
+
+
+# Create your views here.
+class HotSKUListView(ListCacheResponseMixin,ListAPIView):
+    """
+    获取热销商品
+    GET /goods/categories/(?P<category_id>\d+)/hotskus/
+    """
+    serializer_class = SKUSerializer
+    pagination_class = None
+
+    def get_queryset(self):
+        category_id = self.kwargs['category_id']
+        return SKU.objects.filter(category_id=category_id, is_launched=True).order_by('-sales')[:2]
+
+
+class SKUListView(ListAPIView):
+    '''
+    商品列表数据
+        GET /goods/categories/(?P<category_id>\d+)/skus/?page=xxx&page_size=xxx&ordering=xxx
+    '''
+    serializer_class = SKUSerializer
+    # 过滤排行
+    filter_backends = [OrderingFilter]
+    ordering_filds = ('create_time', 'price','sales')
+
+    def get_queryset(self):
+        category_id = self.kwargs.get('category_id')
+        return SKU.objects.filter(category_id=category_id, is_launched=True)
