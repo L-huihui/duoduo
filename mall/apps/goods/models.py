@@ -1,9 +1,6 @@
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
 from django.db import models
-
-# Create your models here.
-from django.db import models
 from utils.models import BaseModel
 
 
@@ -43,7 +40,7 @@ class GoodsChannel(BaseModel):
 
 class Brand(BaseModel):
     """
-    品牌
+    品牌`
     """
     name = models.CharField(max_length=20, verbose_name='名称')
     logo = models.ImageField(verbose_name='Logo图片')
@@ -72,9 +69,11 @@ class Goods(BaseModel):
                                   verbose_name='三级类别')
     sales = models.IntegerField(default=0, verbose_name='销量')
     comments = models.IntegerField(default=0, verbose_name='评价数')
+
     desc_detail = RichTextUploadingField(default='', verbose_name='详细介绍')
     desc_pack = RichTextField(default='', verbose_name='包装信息')
     desc_service = RichTextUploadingField(default='', verbose_name='售后服务')
+
     class Meta:
         db_table = 'tb_goods'
         verbose_name = '商品'
@@ -173,4 +172,3 @@ class SKUSpecification(BaseModel):
 
     def __str__(self):
         return '%s: %s - %s' % (self.sku, self.spec.name, self.option.value)
-

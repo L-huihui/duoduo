@@ -1,10 +1,11 @@
 import time
 import os
 from goods.models import GoodsChannel
+from mall import settings
 from .models import ContentCategory
 from collections import OrderedDict
 from django.template import loader
-from django.conf import settings
+
 '''
 页面静态化－－－－提升用户体验
 其实就是我们先把数据查询出来，　将查询出来的数据填充到模板中
@@ -79,7 +80,6 @@ def generate_static_index_html():
         'categories': categories,
         'contents': contents
     }
-
     # 数据分为广告数据和分类数据
     # 将数据填充到模板
     # loader.get_template会到系统的模板文件夹中加载指定的文件

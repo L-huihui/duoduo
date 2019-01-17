@@ -26,6 +26,7 @@ def get_user_by_account(username):
         user = None
     return user
 
+
 '''
 １, 获取用户输入的账户框里的信息
 ２，用正则对获取的信息进行匹配，如果匹配到的是电话号码，
@@ -34,10 +35,11 @@ def get_user_by_account(username):
 ４，再进行判断，如果数据库中查询到用户数据不为空并且对密码进行校验是正确的
     那么就返回用户信息，登录成功
 '''
+
+
 class UsernameMobileAuthBackend(ModelBackend):
     def authenticate(self, request, username=None, password=None, **kwargs):
         user = get_user_by_account(username)
         if user is not None and user.check_password(password):
             return user
         return None
-
