@@ -2,10 +2,11 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.views.generic import CreateView
+from django_redis import get_redis_connection
 from rest_framework import mixins
 from rest_framework import status
 from rest_framework.decorators import action
-from rest_framework.generics import RetrieveAPIView, UpdateAPIView, CreateAPIView, ListAPIView
+from rest_framework.generics import RetrieveAPIView, UpdateAPIView, CreateAPIView, ListAPIView, GenericAPIView
 from rest_framework.permissions import IsAuthenticated
 
 from rest_framework.response import Response
@@ -14,6 +15,8 @@ from rest_framework.views import APIView
 # 请求方式GET    /users/usernames/(?P<username>\w{5, 20})/count/
 from rest_framework.viewsets import GenericViewSet
 
+from goods.models import SKU
+from goods.serializer import SKUSerializer
 from users.models import User, Address
 
 '''
@@ -27,7 +30,7 @@ from users.models import User, Address
 
 # 验证用户名
 from users.serializer import RegisterCreateSerializer, UserDetailSerializer, EmailSerializer, AddressSerializer, \
-    AddressTitleSerializer
+    AddressTitleSerializer, AddUserBrowsingHistorySerializer
 
 
 class RegisterUsernameCountAPIView(APIView):
@@ -226,3 +229,40 @@ class AddressViewSet(mixins.ListModelMixin, mixins.CreateModelMixin, mixins.Upda
         request.user.default_address = address
         request.user.save()
         return Response({'message': 'OK'}, status=status.HTTP_200_OK)
+
+
+# 添加浏览记录
+class UserBrowsingHistoryView(mixins.CreateModelMixin, GenericAPIView):
+    """
+    用户浏览历史记录
+    POST /users/browerhistories/
+    GET  /users/browerhistories/
+    数据只需要保存到redis中
+    """
+    serializer_class = AddUserBrowsingHistorySerializer
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request):
+        """
+        保存
+        """
+        return self.create(request)
+
+    # 生成浏览记录
+    def get(self,request):
+        """获取"""
+        #获取用户信息
+        user_id = request.user.id
+        #连接redis
+        redis_conn =  get_redis_connection('history')
+        #获取数据
+        history_sku_ids = redis_conn.lrange('history_%s'%user_id,0,5)
+        skus = []
+        for sku_id in history_sku_ids:
+            sku = SKU.objects.get(pk=sku_id)
+            skus.append(sku)
+        #序列化
+        serializer = SKUSerializer(skus,many=True)
+        return Response(serializer.data)
+
+

@@ -10,6 +10,10 @@ urlpatterns = [
    url(r'^infos/$', views.UserDetailView.as_view(), name='infos'),
    url(r'^emails/$', views.EmailView.as_view(), name='send_mail'),
    url(r'^emails/verification/$', views.VerificationEmailView.as_view()),
+   # /users/browerhistories/
+   url(r'^browerhistories/$', views.UserBrowsingHistoryView.as_view(), name='history'),
+   #/users/browerhistories/
+   # url(r'^browerhistories/$', views.UserBrowsingHistoryView.as_view(),name='history'),
 ]
 from .views import AddressViewSet
 from rest_framework.routers import DefaultRouter
