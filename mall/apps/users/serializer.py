@@ -188,7 +188,7 @@ class AddressSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Address
-        exclude = ('user', 'is_deleted', 'create_time', 'updata_time')
+        exclude = ('user', 'is_deleted', 'create_time', 'update_time')
 
     def create(self, validated_data):
         # Address模型类中有user属性,将user对象添加到模型类的创建参数中
