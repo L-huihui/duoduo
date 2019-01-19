@@ -94,7 +94,7 @@ class SKUListView(ListAPIView):
         GET /goods/categories/(?P<category_id>\d+)/skus/?page=xxx&page_size=xxx&ordering=xxx
     '''
     serializer_class = SKUSerializer
-    # 过滤排行
+    # 根据制定字段进行排序
     filter_backends = [OrderingFilter]
     ordering_filds = ('create_time', 'price','sales')
 

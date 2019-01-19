@@ -117,3 +117,27 @@ def generate_static_sku_detail_html(sku_id):
     file_path = os.path.join(settings.GENERATED_STATIC_HTML_FILES_DIR, 'goods/' + str(sku_id) + '.html')
     with open(file_path, 'w') as f:
         f.write(html_text)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

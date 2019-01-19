@@ -104,16 +104,16 @@ class RegisterCreateSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError('验证码不一致')
 
         return attrs
-        '''
-        父类的create方法不能满足因为当前的数据太多,父类中没有个某些字段,
-        因此我们重写create方法
-        1, 删除模型中没有的字段数据
-        2, 删除完模型中没有的字段后数据可以满足父类的create方法
-        3, 调用父类的create方法
-        4, 当前的密码是明文保存,为了安全起见,我们将密码进行加密
-        5, 保存数据
-        6, 返回响应
-        '''
+    '''
+    父类的create方法不能满足因为当前的数据太多,父类中没有个某些字段,
+    因此我们重写create方法
+    1, 删除模型中没有的字段数据
+    2, 删除完模型中没有的字段后数据可以满足父类的create方法
+    3, 调用父类的create方法
+    4, 当前的密码是明文保存,为了安全起见,我们将密码进行加密
+    5, 保存数据
+    6, 返回响应
+    '''
 
     def create(self, validated_data):
         del validated_data['password2']
