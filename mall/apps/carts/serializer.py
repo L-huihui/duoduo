@@ -26,17 +26,17 @@ class CartSerializer(serializers.Serializer):
 from rest_framework import serializers
 from goods.models import SKU
 
-class CartSKUSerializer(serializers.ModelSerializer):
 
+class CartSKUSerializer(serializers.ModelSerializer):
     count = serializers.IntegerField(label='数量')
     selected = serializers.BooleanField(label='是否勾选')
 
     class Meta:
         model = SKU
-        fields = ('id','count', 'name', 'default_image_url', 'price', 'selected')
+        fields = ('id', 'count', 'name', 'default_image_url', 'price', 'selected')
+
 
 class CartDeleteSerializer(serializers.Serializer):
-
     sku_id = serializers.IntegerField(label='商品id', min_value=1)
 
     def validate(self, attrs):

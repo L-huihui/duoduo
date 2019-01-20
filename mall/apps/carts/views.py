@@ -114,7 +114,9 @@ class CartsApiView(APIView):
             redis_conn = get_redis_connection('cart')
             # 6.2 将数据保存在redis中的hash和set中
             # 保存在hash中的数据 cart_userid:sku_id:count
-            redis_conn.hset('cart_%s' % user.id, sku_id, count)
+            # hincrby 传入的是正数就相加，传入负数就减
+            # 在原来的基础上添加
+            redis_conn.hincrby('cart_%s' % user.id, sku_id, count)
             # 保存在set中的数据  cart_selrcted_userid:sku_id
             redis_conn.sadd('cart_selected_%s' % user.id, sku_id)
             # 6.3 返回响应
@@ -309,8 +311,11 @@ class CartsApiView(APIView):
         # 3， 获取校验之后的数据
         sku_id = serializer.validated_data.get('sku_id')
         # 4, 获取用户信息
-        user = request.user
-        if user is not None:
+        try:
+            user = request.user
+        except Exception as e:
+            user = None
+        if user is not None and user.is_authenticated:
             # 5, 登录用户从raids中删除数据
             # 5.1 连接redis
             redis_conn = get_redis_connection('cart')
@@ -338,3 +343,6 @@ class CartsApiView(APIView):
                 cookie_str = base64.b64encode(dumps)
                 response.set_cookie('cart', cookie_str)
             return response
+
+
+

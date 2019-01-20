@@ -14,11 +14,12 @@ from rest_framework.views import APIView
 
 # 请求方式GET    /users/usernames/(?P<username>\w{5, 20})/count/
 from rest_framework.viewsets import GenericViewSet
+from rest_framework_jwt.views import ObtainJSONWebToken
 
 from goods.models import SKU
 from goods.serializer import SKUSerializer
 from users.models import User, Address
-
+from carts.utils import merge_cookie_to_redis
 '''
 前端在填写完用户名的时候,会将用户名传递给后端,通过get方式存放在url中
 后端操作:
@@ -265,4 +266,21 @@ class UserBrowsingHistoryView(mixins.CreateModelMixin, GenericAPIView):
         serializer = SKUSerializer(skus,many=True)
         return Response(serializer.data)
 
+
+class UserAuthorizationView(ObtainJSONWebToken):
+
+    def post(self, request, *args, **kwargs):
+        # 调用jwt扩展的方法，对用户登录的数据进行验证
+        response = super().post(request)
+
+        # 如果用户登录成功，进行购物车数据合并
+        serializer = self.get_serializer(data=request.data)
+        if serializer.is_valid():
+            # 表示用户登录成功
+            user = serializer.validated_data.get("user")
+            # 合并购物车
+            #merge_cart_cookie_to_redis(request, user, response)
+            response = merge_cookie_to_redis(request, user, response)
+
+        return response
 
