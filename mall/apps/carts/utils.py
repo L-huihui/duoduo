@@ -19,6 +19,30 @@ redis中的数据结构：hash: {用户id:{商品id：商品数量}}
 cookie中的数据结构：{商品id：{商品个数：xxx， 是否勾选：xxx}}
 '''
 
+'''
+1, 获取cookie中的数据
+    cookie中的数据结构：{商品id：{商品个数：xxx ,是否勾选:xxx}}
+    1.1 判断cookie中是否有数据，
+    1.2 如果cookie中有数据则进行第二步的操作（需要对数据进行pickle和base64操作）
+    1.3 如果cookie中没有数据，直接返回响应
+2, 获取redis中的数据
+    redis中的数据结构：Hash ： {用户id：{商品id：商品个数}}
+                     Set  ： {用户id：{商品id， 商品id...}}
+    2.1 连接redis
+    2.2 根据user.id获取redis中的所有数据
+3, 初始化redis中的数据
+    3.1 组织保存在redis中Hash的数据
+        3.1.1 遍历redis中的数据，将对应的数据保存在空字典中
+    3.2 组织保存在Set 中的数据：初始化一个空列表
+4, 合并
+    4.1 遍历cookie中的数据，当cookie和redis中商品重复时选取cookie中的商品数量
+    4.2 当cookie中勾选状态为True 时添加到set列表中
+5, 将最终数据保存到redis中，
+    5.1 Hash数据将组织的数据保存到hash中
+    5.2 对set的列表进行解包保存到set中，但是要对该列表进行判断，当大于0的时候才能解包添加
+6, 返回响应
+'''
+
 
 def merge_cookie_to_redis(request, user, response):
     # 1, 获取cookie中的数据
@@ -50,12 +74,11 @@ def merge_cookie_to_redis(request, user, response):
             if count_selected_dict['selected']:
                 selected_ids.append(sku_id)
         # 5, 将最终的数据保存到redis中
-        redis_conn.hmset('cart_%s'%user.id, merge_cart)
+        redis_conn.hmset('cart_%s' % user.id, merge_cart)
         # 当勾选的商品id不为0的时候，对列表解包添加
-        if len(selected_ids) >0:
-            redis_conn.sadd('cart_selected_%s'%user.id, *selected_ids)
+        if len(selected_ids) > 0:
+            redis_conn.sadd('cart_selected_%s' % user.id, *selected_ids)
         # 6, 合并之后，删除cookie中的数据
         return response
 
     return response
-

@@ -4,12 +4,13 @@ from django.shortcuts import render
 
 # Create your views here.
 from django_redis import get_redis_connection
+from rest_framework.generics import CreateAPIView
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from goods.models import SKU
-from orders.serializer import OrderSettlementSerializer
+from orders.serializer import OrderSettlementSerializer, OrderCommitSerializer
 
 
 class OrderSettlementView(APIView):
@@ -52,4 +53,12 @@ class OrderSettlementView(APIView):
         serializer = OrderSettlementSerializer({'freight': freight, 'skus': skus})
         # 5, 返回响应
         return Response(serializer.data)
+
+
+class OrderView(CreateAPIView):
+    '''
+    保存订单
+    '''
+    permission_classes = [IsAuthenticated]
+    serializer_class = OrderCommitSerializer
 
