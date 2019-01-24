@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3e7baa8-10a3-4ce3-b0c6-a706ecaa6124" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mall/mall/settings.py" afterPath="$PROJECT_DIR$/mall/mall/settings.py" />
     </list>
     <list id="c1065b4e-13fd-4fcd-b87b-2a1607ef2efe" name="Failed commit: Default" comment="FastDFS与富文本编辑器&#10;&#10;&#10;&#10;首页图片的添加以及首页静态页面的生成" />
@@ -37,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/mall/mall/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="469">
-              <caret line="322" column="39" lean-forward="false" selection-start-line="322" selection-start-column="39" selection-end-line="322" selection-end-column="39" />
+              <caret line="322" column="67" lean-forward="false" selection-start-line="322" selection-start-column="67" selection-end-line="322" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -1071,7 +1070,7 @@
     <entry file="file://$PROJECT_DIR$/mall/mall/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="469">
-          <caret line="322" column="39" lean-forward="false" selection-start-line="322" selection-start-column="39" selection-end-line="322" selection-end-column="39" />
+          <caret line="322" column="67" lean-forward="false" selection-start-line="322" selection-start-column="67" selection-end-line="322" selection-end-column="67" />
           <folding />
         </state>
       </provider>
