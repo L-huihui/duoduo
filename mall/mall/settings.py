@@ -302,8 +302,8 @@ GENERATED_STATIC_HTML_FILES_DIR = os.path.join(os.path.dirname(BASE_DIR), 'front
 
 CRONJOBS = [
     # 每1分钟执行一次生成主页静态文件
-    ('*/5 * * * *', 'contents.crons.generate_static_index_html',
-     '>> /home/python/Desktop/meiduo_mall/mall/logs/crontab.log')
+    ('*/1 * * * *', 'contents.crons.generate_static_index_html',
+     '>> /home/python/Desktop/duoduo/mall/logs/crontab.log')
 ]
 # 解决crontab中文问题
 CRONTAB_COMMAND_PREFIX = 'LANG_ALL=zh_cn.UTF-8'
@@ -319,3 +319,5 @@ HAYSTACK_CONNECTIONS = {
 
 # 当添加、修改、删除数据时，自动生成索引
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
+
+#李云会　吃　　鸡屎　啊啊啊啊啊飒飒　是
