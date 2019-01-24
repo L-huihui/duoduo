@@ -115,7 +115,7 @@ def generate_static_sku_detail_html(sku_id):
     template = loader.get_template('detail.html')
     html_text = template.render(context)
     file_path = os.path.join(settings.GENERATED_STATIC_HTML_FILES_DIR, 'goods/' + str(sku_id) + '.html')
-    with open(file_path, 'w') as f:
+    with open(file_path, 'w', encoding='utf-8') as f:
         f.write(html_text)
 
 

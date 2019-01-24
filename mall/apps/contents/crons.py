@@ -89,5 +89,5 @@ def generate_static_index_html():
     # 指定写入路径
     file_path = os.path.join(settings.GENERATED_STATIC_HTML_FILES_DIR, 'index.html')
     # 写入数据
-    with open(file_path, 'w') as f:
+    with open(file_path, 'w', encoding='utf-8') as f:
         f.write(html_data)
