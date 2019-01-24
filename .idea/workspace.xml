@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3e7baa8-10a3-4ce3-b0c6-a706ecaa6124" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/meiduo_mall.iml" afterPath="$PROJECT_DIR$/.idea/meiduo_mall.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mall/mall/settings.py" afterPath="$PROJECT_DIR$/mall/mall/settings.py" />
     </list>
     <list id="c1065b4e-13fd-4fcd-b87b-2a1607ef2efe" name="Failed commit: Default" comment="FastDFS与富文本编辑器&#10;&#10;&#10;&#10;首页图片的添加以及首页静态页面的生成" />
@@ -38,8 +35,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mall/mall/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="321" column="13" lean-forward="true" selection-start-line="321" selection-start-column="13" selection-end-line="321" selection-end-column="13" />
+            <state relative-caret-position="489">
+              <caret line="321" column="0" lean-forward="false" selection-start-line="321" selection-start-column="2" selection-end-line="321" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -160,8 +157,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
     <option name="y" value="24" />
-    <option name="width" value="1339" />
-    <option name="height" value="659" />
+    <option name="width" value="1531" />
+    <option name="height" value="733" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -697,10 +694,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1339" height="659" extended-state="6" />
+    <frame x="65" y="24" width="1531" height="733" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18735543" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16319677" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26232114" sideWeight="0.51277375" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1086,8 +1083,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mall/mall/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="321" column="13" lean-forward="true" selection-start-line="321" selection-start-column="13" selection-end-line="321" selection-end-column="13" />
+        <state relative-caret-position="489">
+          <caret line="321" column="0" lean-forward="false" selection-start-line="321" selection-start-column="2" selection-end-line="321" selection-end-column="15" />
           <folding />
         </state>
       </provider>
