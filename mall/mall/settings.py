@@ -320,4 +320,4 @@ HAYSTACK_CONNECTIONS = {
 # 当添加、修改、删除数据时，自动生成索引
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
-#李云会　吃　　鸡屎　啊啊啊啊啊飒飒　是
+#李云会　吃　　鸡屎　啊啊啊啊啊飒飒　是三十三岁是是是是是是是　三十三是是是是是
