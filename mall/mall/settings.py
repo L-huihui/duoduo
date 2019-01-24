@@ -113,7 +113,7 @@ WSGI_APPLICATION = 'mall.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST': '127.0.0.1',  # 数据库主机
+        'HOST': '106.13.74.242',  # 数据库主机
         'PORT': 3306,  # 数据库端口
         'USER': 'root',  # 数据库用户名
         'PASSWORD': 'mysql',  # 数据库用户密码
@@ -302,7 +302,7 @@ GENERATED_STATIC_HTML_FILES_DIR = os.path.join(os.path.dirname(BASE_DIR), 'front
 
 CRONJOBS = [
     # 每1分钟执行一次生成主页静态文件
-    ('*/10 * * * *', 'contents.crons.generate_static_index_html',
+    ('*/1 * * * *', 'contents.crons.generate_static_index_html',
      '>> /home/python/Desktop/meiduo_mall/mall/logs/crontab.log')
 ]
 # 解决crontab中文问题
