@@ -3,12 +3,12 @@ from mall import settings
 
 
 # 对返回给前端的数据openid进行加密处理
-def generic_open_id(openid):
+def generic_open_id(access_token):
     # 创建一个序列化器
     s = Serializer(secret_key=settings.SECRET_KEY, expires_in=3600)
     # 对数据进行处理
     token = s.dumps({
-        'openid': openid
+        'access_token': access_token
     })
     return token.decode()
 
@@ -23,4 +23,4 @@ def check_access_token(access_token):
     except BadSignature:
         return None
     # 返回openid
-    return data['openid']
+    return data['access_token']

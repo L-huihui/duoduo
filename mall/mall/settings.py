@@ -270,6 +270,11 @@ AUTHENTICATION_BACKENDS = [
 QQ_CLIENT_ID = '101474184'
 QQ_CLIENT_SECRET = 'c6ce949e04e12ecc909ae6a8b09b637c'
 QQ_REDIRECT_URI = 'http://www.meiduo.site:8080/oauth_callback.html'
+#sina登录参数
+sina_CLIENT_ID = '136094613'
+sina_CLIENT_SECRET = '7bac850505d02cafd0cf517949f3355d'
+sina_REDIRECT_URI = 'http://www.meiduo.site:8080/sina_callback.html'
+
 
 # 邮箱
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
