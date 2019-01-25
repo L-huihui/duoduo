@@ -3,6 +3,9 @@ from django.shortcuts import render
 # Create your views here.
 from django.views.generic import View
 from rest_framework.filters import OrderingFilter
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+from rest_framework.views import APIView
 from rest_framework_extensions.cache.mixins import ListCacheResponseMixin
 
 from goods.models import GoodsCategory, GoodsChannel
@@ -11,6 +14,9 @@ from collections import OrderedDict
 
 
 # Create your views here.
+from orders.models import OrderInfo, OrderGoods
+
+
 class CategoryView(View):
     """
     获取首页分类数据

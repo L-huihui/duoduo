@@ -1,5 +1,6 @@
 from django.conf.urls import url
-from . import views
+
+from goods import views
 
 urlpatterns = [
     #/goods/categories/
@@ -7,7 +8,6 @@ urlpatterns = [
     # /goods/categories/(?P<category_id>\d+)/hotskus/
     url(r'^categories/(?P<category_id>\d+)/hotskus/$', views.HotSKUListView.as_view(), name='hot'),
     url(r'^categories/(?P<category_id>\d+)/skus/$', views.SKUListView.as_view(), name='list'),
-
 ]
 
 from rest_framework.routers import DefaultRouter

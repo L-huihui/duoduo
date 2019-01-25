@@ -160,3 +160,26 @@ class OrderCommitSerializer(serializers.ModelSerializer):
         pl.srem('cart_selected_%s' % user.id, *redis_selected_ids)
         pl.execute()
         return order
+
+
+class UserCenterSkuSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SKU
+        fields = ('name','default_image_url')
+
+
+class  UserCenterGoodsSerializer (serializers.ModelSerializer):
+    sku = UserCenterSkuSerializer()
+
+    class Meta:
+        model = OrderGoods
+        fields=('sku','price','count')
+
+
+class UserCenterOrderSerializer(serializers.ModelSerializer):
+    skus = UserCenterGoodsSerializer(many=True,read_only=True)
+
+    class Meta:
+
+        model = OrderInfo
+        fields = ('user','order_id','total_count','total_amount','freight','pay_method','status','skus','create_time')

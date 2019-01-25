@@ -22,7 +22,7 @@ def get_user_by_account(username):
             user = User.objects.get(mobile=username)
         else:
             user = User.objects.get(username=username)
-    except User.DoseNotExist:
+    except User.DoesNotExist:
         user = None
     return user
 

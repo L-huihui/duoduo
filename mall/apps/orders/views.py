@@ -4,13 +4,15 @@ from django.shortcuts import render
 
 # Create your views here.
 from django_redis import get_redis_connection
-from rest_framework.generics import CreateAPIView
+from rest_framework.filters import OrderingFilter
+from rest_framework.generics import CreateAPIView, ListAPIView
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from goods.models import SKU
-from orders.serializer import OrderSettlementSerializer, OrderCommitSerializer
+from orders.models import OrderInfo
+from orders.serializer import OrderSettlementSerializer, OrderCommitSerializer, UserCenterOrderSerializer
 
 
 class OrderSettlementView(APIView):
@@ -60,5 +62,15 @@ class OrderView(CreateAPIView):
     保存订单
     '''
     permission_classes = [IsAuthenticated]
+
     serializer_class = OrderCommitSerializer
+
+
+class UserCenterOrdersView(ListAPIView):
+
+    permission_classes = [IsAuthenticated]
+    queryset = OrderInfo.objects.all()
+    serializer_class = UserCenterOrderSerializer
+    filter_backends = [OrderingFilter]
+    ordering_fields = ('create_time', 'total_amount',)
 
