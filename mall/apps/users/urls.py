@@ -14,8 +14,10 @@ urlpatterns = [
    url(r'^browerhistories/$', views.UserBrowsingHistoryView.as_view(), name='history'),
    #/users/browerhistories/
    # url(r'^browerhistories/$', views.UserBrowsingHistoryView.as_view(),name='history'),
+   url(r'^(?P<pk>\d+)/password/$', views.ResetPasswordAPIView.as_view())
+
 ]
-from .views import AddressViewSet
+from .views import AddressViewSet, ResetPasswordAPIView
 from rest_framework.routers import DefaultRouter
 router = DefaultRouter()
 router.register(r'addresses',AddressViewSet,base_name='address')

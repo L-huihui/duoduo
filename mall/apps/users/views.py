@@ -20,6 +20,7 @@ from goods.models import SKU
 from goods.serializer import SKUSerializer
 from users.models import User, Address
 from carts.utils import merge_cookie_to_redis
+
 '''
 前端在填写完用户名的时候,会将用户名传递给后端,通过get方式存放在url中
 后端操作:
@@ -192,10 +193,10 @@ class AddressViewSet(mixins.ListModelMixin, mixins.CreateModelMixin, mixins.Upda
         user = self.request.user
         # 设置响应
         return Response({
-            'user_id':user.id,
-            'default_address_id':user.default_address_id,
+            'user_id': user.id,
+            'default_address_id': user.default_address_id,
             'limit': 20,
-            'addresses':serializer.data
+            'addresses': serializer.data
         })
 
     def destroy(self, request, *args, **kwargs):
@@ -250,25 +251,24 @@ class UserBrowsingHistoryView(mixins.CreateModelMixin, GenericAPIView):
         return self.create(request)
 
     # 生成浏览记录
-    def get(self,request):
+    def get(self, request):
         """获取"""
-        #获取用户信息
+        # 获取用户信息
         user_id = request.user.id
-        #连接redis
-        redis_conn =  get_redis_connection('history')
-        #获取数据
-        history_sku_ids = redis_conn.lrange('history_%s'%user_id,0,5)
+        # 连接redis
+        redis_conn = get_redis_connection('history')
+        # 获取数据
+        history_sku_ids = redis_conn.lrange('history_%s' % user_id, 0, 5)
         skus = []
         for sku_id in history_sku_ids:
             sku = SKU.objects.get(pk=sku_id)
             skus.append(sku)
-        #序列化
-        serializer = SKUSerializer(skus,many=True)
+        # 序列化
+        serializer = SKUSerializer(skus, many=True)
         return Response(serializer.data)
 
 
 class UserAuthorizationView(ObtainJSONWebToken):
-
     def post(self, request, *args, **kwargs):
         # 调用jwt扩展的方法，对用户登录的数据进行验证
         response = super().post(request)
@@ -279,8 +279,34 @@ class UserAuthorizationView(ObtainJSONWebToken):
             # 表示用户登录成功
             user = serializer.validated_data.get("user")
             # 合并购物车
-            #merge_cart_cookie_to_redis(request, user, response)
+            # merge_cart_cookie_to_redis(request, user, response)
             response = merge_cookie_to_redis(request, user, response)
 
         return response
+
+
+class ResetPasswordAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def put(self, request, pk):
+        # 1, 先获取前端传递过来的用户
+        data = request.data
+        # 2， 根据用户id进行数据库查询，查询当前用户信息
+        user = User.objects.get(id=pk)
+        # 3， 获取用户输入的当前密码， 要修改的密码
+        old_password = data.get('old_password')
+        password = data.get('password')
+        password2 = data.get('password2')
+        # 4， 校验当前用户的密码与输入的原密码是否相同
+        if not user.check_password(old_password):
+            raise Exception('原密码输入错误！')
+        else:
+            if password != password2:
+                raise Exception('两次输入的密码不一致')
+            else:
+                user.set_password(password2)
+                user.save()
+
+        return Response({'message':'OK'})
+
 
