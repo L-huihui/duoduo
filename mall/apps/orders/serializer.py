@@ -165,7 +165,7 @@ class OrderCommitSerializer(serializers.ModelSerializer):
 class UserCenterSkuSerializer(serializers.ModelSerializer):
     class Meta:
         model = SKU
-        fields = ('name','default_image_url')
+        fields = ('id', 'name', 'default_image_url')
 
 
 class  UserCenterGoodsSerializer (serializers.ModelSerializer):
@@ -173,7 +173,8 @@ class  UserCenterGoodsSerializer (serializers.ModelSerializer):
 
     class Meta:
         model = OrderGoods
-        fields=('sku','price','count')
+        fields=('sku','price','count','comment','score','is_anonymous','is_commented')
+        read_only_fields = ('sku','price')
 
 
 class UserCenterOrderSerializer(serializers.ModelSerializer):
@@ -183,3 +184,22 @@ class UserCenterOrderSerializer(serializers.ModelSerializer):
 
         model = OrderInfo
         fields = ('user','order_id','total_count','total_amount','freight','pay_method','status','skus','create_time')
+
+
+class CommentOrderSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = OrderGoods
+        fields = ('sku', 'comment', 'score', "is_anonymous", "order")
+        extra_kwargs = {
+            "comment": {
+                'required': True,
+            }
+        }
+
+
+class CommentDetailSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = OrderGoods
+        fields=('sku','price','count','comment','score','is_anonymous','is_commented')
