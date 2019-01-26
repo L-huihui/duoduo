@@ -169,7 +169,7 @@ class UserCenterSkuSerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'default_image_url')
 
 
-class  UserCenterGoodsSerializer (serializers.ModelSerializer):
+class UserCenterGoodsSerializer (serializers.ModelSerializer):
     sku = UserCenterSkuSerializer()
 
     class Meta:
