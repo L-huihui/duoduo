@@ -3,6 +3,7 @@ from django_redis import get_redis_connection
 from rest_framework import serializers
 from goods.models import SKU
 from orders.models import OrderInfo, OrderGoods
+from users.models import User
 
 
 class CartSKUSerializer(serializers.ModelSerializer):
