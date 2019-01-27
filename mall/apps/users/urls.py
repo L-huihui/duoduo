@@ -10,6 +10,7 @@ urlpatterns = [
    url(r'^infos/$', views.UserDetailView.as_view(), name='infos'),
    url(r'^emails/$', views.EmailView.as_view(), name='send_mail'),
    url(r'^emails/verification/$', views.VerificationEmailView.as_view()),
+   url(r'^(?P<pk>\d+)/set/password/$', views.ResetPasswordAPIView.as_view()),
 
    # url(r'^(?P<username>1[3-9]\d{9})/sms/token/$', views.FindUserPassword.as_view()),
    #  url(r'^sms_codes/$',views.RegisterSMSCodeView.as_view()),

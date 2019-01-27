@@ -160,3 +160,47 @@ class OrderCommitSerializer(serializers.ModelSerializer):
         pl.srem('cart_selected_%s' % user.id, *redis_selected_ids)
         pl.execute()
         return order
+
+
+
+class UserCenterSkuSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SKU
+        fields = ('id', 'name', 'default_image_url')
+
+
+class UserCenterGoodsSerializer (serializers.ModelSerializer):
+    sku = UserCenterSkuSerializer()
+
+    class Meta:
+        model = OrderGoods
+        fields=('sku','price','count','comment','score','is_anonymous','is_commented')
+        read_only_fields = ('sku','price')
+
+
+class UserCenterOrderSerializer(serializers.ModelSerializer):
+    skus = UserCenterGoodsSerializer(many=True,read_only=True)
+
+    class Meta:
+
+        model = OrderInfo
+        fields = ('user','order_id','total_count','total_amount','freight','pay_method','status','skus','create_time')
+
+
+class CommentOrderSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = OrderGoods
+        fields = ('sku', 'comment', 'score', "is_anonymous", "order")
+        extra_kwargs = {
+            "comment": {
+                'required': True,
+            }
+        }
+
+
+class CommentDetailSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = OrderGoods
+        fields=('sku','comment','score','is_anonymous','is_commented')

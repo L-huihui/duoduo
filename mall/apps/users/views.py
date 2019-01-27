@@ -448,95 +448,28 @@ class SetPassWordAPIView(APIView):
 
 
 
-# class FindUserPassword(APIView):
-#     def get(self, reqeust, username):
-#         try:
-#             user = get_user_by_account(username)
-#         except:
-#             return Response('用户不存在')
-#         user_mobile = user.mobile
-#         text = reqeust.query_params.get('text')
-#         image_id = reqeust.query_params.get('image_code_id')
-#
-#         redis_conn = get_redis_connection('code')
-#         redis_text = redis_conn.get('img_' + str(image_id))
-#
-#         if redis_text.decode().lower() != text.lower():
-#             raise Exception('输入错误')
-#
-#         token = check_access_token(mobile=user_mobile)
-#
-#         data = {
-#             'mobile': user_mobile,  # 加密
-#             'access_token': token,
-#         }
-#         return Response(data)
-#
-#
-# class RegisterSMSCodeView(APIView):
-#     def get(self, request):
-#         access_token = request.query_params.get('access_token')
-#
-#         token = inspect_access_token(access_token)
-#
-#         mobile = token['mobile']
-#
-#         redis_conn = get_redis_connection('code')
-#         sms_code = '%06d' % random.randint(0, 999999)
-#         # redis增加记录
-#         redis_conn.setex('sms_%s' % mobile, 5 * 60, sms_code)
-#         redis_conn.setex('sms_flag_%s' % mobile, 60, 1)
-#         # 发送短信
-#         ccp = CCP()
-#         ccp.send_template_sms(mobile, [sms_code, 5], 1)
-#
-#         return Response({'message': 'ok'})
-#
-#
-# class SendPassword(APIView):
-#     def get(self, request, username):
-#
-#         try:
-#             user = get_user_by_account(username)
-#         except:
-#             return Response('用户不存在')
-#
-#         user_id = user.id
-#
-#         user_mobile = user.mobile
-#
-#         sms_code = request.query_params.get('sms_code')
-#
-#         redis_conn = get_redis_connection('code')
-#
-#         redis_code = redis_conn.get('sms_' + str(user_mobile)).decode()
-#
-#         if sms_code != redis_code:
-#             raise Exception('验证码输入错误操你妈的')
-#
-#         access_token = check_access_token(mobile=user_mobile)
-#
-#         data = {
-#             'user_id': user_id,
-#             'access_token': access_token
-#         }
-#
-#         return Response(data)
-#
-#
-# class CheakPassword(APIView):
-#     def post(self, request, user_id):
-#
-#         password = request.data.get('password')
-#         password2 = request.data.get('password2')
-#         access_token = request.data.get('access_token')
-#
-#         if not access_token:
-#             return Response('请求超时')
-#         if password != password2:
-#             return Response('前后密码不一致操你妈的')
-#
-#         user = User.objects.get(id=user_id)
-#         user.set_password(password)
-#         user.save()
-#         return Response(status=status.HTTP_201_CREATED)
+# 重置密码
+class ResetPasswordAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def put(self, request, pk):
+        # 1, 先获取前端传递过来的用户
+        user = User.objects.get(id=pk)
+
+        # 2， 根据用户id进行数据库查询，查询当前用户信息
+        data = request.data
+        # 3， 获取用户输入的当前密码， 要修改的密码
+        old_password = data.get('old_password')
+        password = data.get('password')
+        password2 = data.get('password2')
+        # 4， 校验当前用户的密码与输入的原密码是否相同
+        if not user.check_password(old_password):
+            raise Exception('原密码输入错误！')
+        else:
+            if password != password2:
+                raise Exception('两次输入的密码不一致')
+            else:
+                user.set_password(password2)
+                user.save()
+
+        return Response({'message': 'OK'})

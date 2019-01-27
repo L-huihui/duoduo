@@ -224,6 +224,7 @@ var vm = new Vue({
                         this.is_show_form_3 = false;
                         this.is_show_form_4 = true;
                         location.href = '/login.html'
+                        alert('密码修改成功,请重新登陆!')
                     })
                     .catch(error => {
                         alert(error.response.data.message);
