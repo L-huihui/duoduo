@@ -221,18 +221,21 @@ class OauthSinaUserAPIView(APIView):
             "client_secret": "7bac850505d02cafd0cf517949f3355d",
             "grant_type": "authorization_code",
             "redirect_uri": "http://www.meiduo.site:8080/sina_callback.html",
-            "code": code
+            # "redirect_uri": "http://www.meiduo.site:8080/login.html",
+            "code": code,
+
         }
         response = requests.post(url=url,data=data)
         shuju = response.text
         aaa = json.loads(shuju)
+        # print(aaa)
         access_token = aaa['access_token']
 
         try:
             sinauser = OAuthSinaUser.objects.get(access_token=access_token)
         except OAuthSinaUser.DoesNotExist:
             # 数据库中没有查找到该数据, 绑定用户信息
-            # 对openid进行加密处理
+            # 对access_token进行加密处理
             token = generic_open_id(access_token)
             return Response({'access_token': token})
         else:
@@ -271,52 +274,3 @@ class OauthSinaUserAPIView(APIView):
         })
 
 
-    '''
-    此时就可以获取想要的用户信息（用户昵称、头像等），可让用户直接登录访问网站了
-
-    其实像微信登陆、QQ登陆的原理都一样，都是：
-
-    1、获取用户授权，取得code
-
-    # 2、将code发送到授权服务器获取Access Token
-    #
-    # 3、通过Access Token调取API接口获取用户信息
-    '''
-    # 2、将code发送到授权服务器获取Access Token
-    # 获取access_token值
-    # def get_access_token(self, code):
-    #     # 构建参数数据
-    #     data_dict = {
-    #         'grant_type': 'authorization_code',
-    #         'client_id': self.client_id,
-    #         'client_secret': self.client_secret,
-    #         'redirect_uri': self.redirect_uri,
-    #         'code': code
-    #     }
-    #
-    #     # 构建url
-    #     access_url = 'https://graph.qq.com/oauth2.0/token?' + urlencode(data_dict)
-    #
-    #     # 发送请求
-    #     try:
-    #         response = requests.get(access_url)
-    #
-    #         # 提取数据
-    #         # access_token=FE04************************CCE2&expires_in=7776000&refresh_token=88E4************************BE14
-    #         data = response.text
-    #
-    #         # 转化为字典
-    #         data = parse_qs(data)
-    #     except:
-    #         raise Exception('微博请求失败')
-    #
-    #     # 提取access_token
-    #     access_token = data.get('access_token', None)
-    #
-    #     if not access_token:
-    #         raise Exception('access_token获取失败')
-    #
-    #     return access_token[0]
-    # 3、通过Access Token调取API接口获取用户信息
-
-    pass

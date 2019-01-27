@@ -192,6 +192,7 @@ var vm = new Vue({
                         localStorage.user_id = response.data.user_id;
                         localStorage.username = response.data.username;
                         location.href = '/';
+                        alert('绑定成功')
                     })
                     .catch(error => {
                         if (error.response.status == 400) {
